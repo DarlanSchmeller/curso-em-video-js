@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receita de Strings</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+            font-family: Arial, sans-serif;
+            margin: 0; 
+            padding: 0;
+            height: 100vh; /* Torna o gradiente cobrir toda a altura da viewport */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+
+        header{
+            color: aliceblue;
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        main{
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+        }
+
+
+        h1{
+            font-size: 24px;
+        }
+
+
+        img{
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+        }
+    </style>
+    <link rel="icon" href="placeholderreceita.jpg">
+</head>
+
+<body> 
+    <header>
+        <h1>SISTEMA DE TRATAMENTO DE STRINGS</h1>
+    </header>
+</body>
+</html>
+
+
+<main>
+<script> 
+    var nome = window.prompt('Qual o seu nome?')
+    var sal = Number.parseFloat(window.prompt('Qual seu salário?'))
+    sal.toFixed(2) // Deixa 2 casas depois da virgula
+    var conta = sal * 8 / 100 // Regra de três manual para porcentagem.
+
+    sal = sal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) // Conversão automática de moeda por variável.
+    conta = conta.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) // Conversão automática de moeda por variável.
+
+    window.alert(`Muito prazer ${nome}, seja bem-vindo(a)`)
+    document.write(`Muito prazer <strong>${nome}</strong>, seu nome possui ${nome.length} letras.</br>`)
+    document.write(`Seu nome totalmente em maiúsculas é: <strong>${nome.toUpperCase()}</strong>.</br>`)
+    document.write(`Seu nome totalmente em minúsculas é: <strong>${nome.toLowerCase()}</strong>.</br>`)
+    document.write(`Seu salário é ${sal}, logo você deve ${conta} a Receita Federal, que equivale a 8% de seu salário.</br>`)
+</script>
+</main>
+
+<body>
+    <img src="placeholderreceita.jpg">
+</body>
+
+
