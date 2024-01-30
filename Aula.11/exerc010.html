@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: radial-gradient(circle, #fff, rgb(152, 161, 167));
+        }
+        main{
+            font-size: 15px;
+            border: solid rgba(0, 0, 0, 0.5);
+            border-color: black;
+            border-radius: 10px;
+            padding: 1px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            line-height: 100px;
+            max-width: 350px;
+            background-color: #fff;
+            margin: 50px auto;
+            
+        }
+        p{
+            font-size: 15px;
+            border: solid rgba(0, 0, 0, 0.5);
+            border-color: black;
+            border-radius: 10px;
+            padding: 1px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            margin: 10px auto;
+            
+        }
+        input {
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            height: 30px;
+            margin: 25px auto;
+            width: 50px;
+            text-align: center;
+        }
+        #botaozin {
+            width: 120px;
+            height: 50px;
+            font-size: 25px;
+            border-radius: 50px;
+            box-shadow: 0px 3px 14px rgba(0, 0, 0, 0.5);
+            background-color: #fff;
+        }
+        
+    </style>
+
+</head>
+
+
+<body>
+    <main><h1>Somando Valores</h1></main>   
+    <input type="number" name="txtn1" id="txtn1">
+    <p>+</p>
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" id="botaozin" onclick="somar()">
+    <div id='resultado'>Resultado</div>
+</body>
+
+
+<script>
+  
+  
+
+  function somar(){
+    var inputnumero = window.document.getElementById('txtn1')
+    var inputnumero2 = window.document.querySelector('input#txtn2')
+    var inputbotao = window.document.getElementById('botaozin')
+    var resultado = window.document.getElementById('resultado')
+    var numero1 = Number(inputnumero.value)
+    var numero2 = Number(inputnumero2.value)
+    var res = numero1 + numero2
+
+    resultado.innerHTML = res;
+
+  }
+  
+  
+</script>
+
+</html>
