@@ -8,7 +8,7 @@ const dica = window.document.getElementById('dica1')
 imagem.innerHTML = '<img src="BancoDeImagens/logomm.png" alt="Logo MMTecnologia">'
 
 
-//Funções abaixo
+// Funções abaixo
 
 function clicar() {
   function horinhas() {
