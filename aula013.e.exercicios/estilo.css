@@ -1,0 +1,73 @@
+body {
+     background: radial-gradient(circle, rgb(39, 92, 157), rgb(24, 60, 116));
+     font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+header {
+     color: whitesmoke;
+     text-align: center;
+     text-shadow: 2px 5px 5px rgba(0,0,0,0.5);
+     margin: 25px;
+     margin-top: 112px;
+        
+}
+section {
+     font-family:'Times New Roman', Times, serif;
+     font-size: 22px;
+     font-weight: light;
+     text-align: center;
+     background: radial-gradient(circle,#ffffff,rgb(205, 216, 255));
+     border-radius: 10px;
+     border-width: 1px;
+     border-style: ridge;
+     border-color: rgba(0,0,0,0.5);
+     padding: 15px;
+     width: 550px;
+     margin: auto;
+     box-shadow: 2px 5px 5px rgba(0,0,0,0.5);
+     text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+}
+#mensagem1 ,#periodo {
+      font-family: monospace;
+      text-decoration: underline;
+      box-sizing: border-box;
+}
+footer {
+     color: whitesmoke;
+     text-align: center;
+     text-shadow: 2px 5px 5px rgba(0,0,0,0.5);
+     font-size: 17px;
+     margin: 25px;
+     cursor: pointer;
+
+} footer a {
+     text-decoration: none;
+     color: white;
+}
+
+img {
+     height: 250px;
+     width: 250px;
+     border-radius: 200px;
+     border: solid 10px;
+     border-color: rgba(0,0,0,0.8);
+     cursor: pointer;
+     box-sizing: border-box;
+}
+img:hover {
+     border-style: ridge;
+     border-width: 15px;
+     border-color: black;
+     
+}
+img:active {
+     border-color: rgb(101, 148, 32);
+     border-width: 23px;
+}
+footer:hover {
+     color: rgb(125, 184, 255);
+     font-size: 20px;
+}
+footer a:active{
+     color: rgb(101, 148, 32);
+     font-size: 24px;
+}
