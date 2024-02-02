@@ -7,15 +7,14 @@ const dica = window.document.getElementById('dica1')
 // Comandos genéricos abaixo
 imagem.innerHTML = '<img src="BancoDeImagens/logomm.png" alt="Logo MMTecnologia">'
 
-
 // Funções abaixo
 
 function clicar() {
   function horinhas() {
       const data = new Date()
-      const hora = data.getHours()
-      const minuto = data.getMinutes() > 9 ? data.getMinutes() : '0' + data.getMinutes()
-    const segundo = data.getSeconds() > 9 ? data.getSeconds() : '0' + data.getSeconds()
+      const hora = 15
+      const minuto = 35
+      const segundo = data.getSeconds() > 9 ? data.getSeconds() : '0' + data.getSeconds()
     if (hora >= 6 && hora < 12) {
      // Manhã
         imagem.innerHTML = '<img src="BancoDeImagens/manha.jpg" alt="Horário do Dia">'
