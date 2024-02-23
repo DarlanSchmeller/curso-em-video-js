@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="script.js" defer></script>
+</head>
+
+
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+    <section>
+        <div id="mensagem1">
+             <p>Ano de Nascimento: <input type="number" value="0" id="nascimento" min="1980-01-01" max="2024-02-03"></p>
+        </div>
+        <div id="clicavel"></div><p>Sexo:  
+            <label class="form">
+                <input type="radio" name="radsex" id="masculino" checked/>
+                <span>Masculino</span>
+              </label>
+            <label class="form">
+                <input type="radio" name="radsex" id="feminino"/>
+                <span>Feminino</span>
+            </label></p>
+            <input type="button" id="botaozin" value="Verificar" onclick="verificar()">
+            </p>
+
+        <div id="imagem1" onclick="clicar()">
+            <img src="BancoDeImagens/logomm.png" alt="Logo MMTecnologia">
+        </div>
+        <div id="resultado">
+             <p>Insira seu nascimento e clique para visualizar.</p>
+        </div>
+    </section>
+    <footer onclick="clicarMM()">
+        <a href="hhttp://127.0.0.1:5500/Exercicio(aula14)/exercicio016.html">&copy; MMTecnologia</a>
+
+    </footer>
+
+    
+    
+</body>
+
+
+</html>

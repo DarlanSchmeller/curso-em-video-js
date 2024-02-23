@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receita Federal</title>
+    <style>
+        body{
+            
+            background: linear-gradient(to bottom, antiquewhite, #95c36d, rgb(68, 68, 178));
+            background-size: 100% 100% ;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 100vh; /* Torna o gradiente cobrir toda a altura da viewport */
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        img{
+            opacity: 98%;
+            max-width: 100%;
+            max-height: auto;
+            border-radius: 10px;
+            text-align: center;
+            display: block;
+            margin: auto auto;
+        }
+        header{
+            color: rgb(255, 255, 255);
+            text-shadow: 3px 3px 3px #000000;
+            font-size: 40px;
+            margin: 0 auto;
+            background-color: rgb(17, 160, 255);
+            background: linear-gradient(to right,#3b4658, #3d7396, #3b4658);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 10px 10px 10px rgba(0,0,0,0.5)  
+        }
+        main {
+            font-size: 12px;
+            text-rendering: geometricPrecision;
+            background-color: #fff;
+            margin: 40px auto;
+            border-radius: 15px;
+            padding: 5px;
+            text-align: center;
+            max-width: 670px;
+            box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+            background-size: 100% 100%;
+        }
+    
+    </style>
+    <link rel="icon" href="placeholderreceita.jpg">
+</head>
+    
+
+<body>
+   <header><strong>Receita Federal do Brasil</strong></header>
+</body>
+
+<script>
+        window.alert('Bem-vindo(a)')
+        var nome = window.prompt('Qual seu nome?')
+        var sal = Number.parseFloat(window.prompt('Qual seu salário?'))
+        var tax = sal * 8 / 100
+        sal = sal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+        tax = tax.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+        document.write(`<main><h1>Bem vindo <strong>${nome}.</strong> </BR>
+            Seu salário informado foi ${sal}. </BR>
+            Sua taxa sobre renda ficou ${tax}, que corresponde a 8% de seu salário.</h1></main>`)
+</script>
+
+<img src="placeholderreceita.jpg">
+
+</html> 

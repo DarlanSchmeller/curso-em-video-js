@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerc011</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background: radial-gradient(circle, #dededc, #97a3a8);
+            padding: 0;
+            margin: 0;
+        }
+        .globo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+        #title {
+            border-radius: 10px;
+            background: radial-gradient(circle, #fff, gray);
+            padding: 15px;
+            font-size: 30px;
+            border: solid 3px rgba(82, 79, 79, 0.6);
+            border-style: ridge;
+            opacity: 95%;
+            box-shadow: 0px 5px 10px rgba(0,0,0,0.6);
+            margin: 45px auto;
+            width: 350px;
+            text-align: center;
+        }
+        .button:active{
+            background: aliceblue
+        }
+        header {
+            border: solid rgba(0,0,0,0.5);
+            border-style: ridge;
+            border-color: rgb(113, 119, 131);
+            border-width:  3px;
+            padding: 10px;
+            background: radial-gradient(circle, rgb(22, 83, 175), rgb(46, 60, 82));
+            text-align: center;
+            font-weight: bold;
+            text-shadow: 0px 5px 10px rgba(0,0,0,1);
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.6);
+            color: #fff;
+            font-size: 22px;
+            width: 100%;
+        }
+        #txtvel {
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            margin: 50px auto;
+            width: 100px;
+            height: 50px;
+            font-size: 25px;
+            border-radius: 20px;
+
+        }
+        #multa {
+            border-radius: 10px;
+            background: radial-gradient(circle, #fff, gray);
+            padding: 15px;
+            font-size: 30px;
+            border: solid 3px rgba(82, 79, 79, 0.6);
+            border-style: ridge;
+            opacity: 95%;
+            box-shadow: 0px 5px 10px rgba(0,0,0,0.6);
+            margin: -50px auto;
+            text-align: center;
+        }
+        .button {
+            font-size: 25px;
+            width: 120px;
+            height: 40px;
+            border-radius: 10px;
+            border: solid 1.5px rgba(0,0,0,0.6);
+            box-shadow: 0px 5px 12px rgba(0,0,0,0.6);
+            background: radial-gradient(circle, #fff, gray);
+            border-style: ridge;
+            margin: -20px;
+
+        }
+        #res {
+            margin: 100px;
+            font-size: 40px;
+            width: 320px;
+            border: solid 3px rgba(0,0,0,0.6);
+            border-radius: 20px;
+            box-shadow: 0px 5px 12px rgba(0,0,0,0.6);
+            padding: 10px;
+            background: radial-gradient(circle, #fff, grey);
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+
+
+<body>
+    <header>
+        <h1>Sistema de multas</h1>
+    </header>
+    <div class="globo">
+        <p id="title">Velocidade do veículo.</p> 
+        <input type="number" name="txtvel" value="0" 
+        id="txtvel">
+        <button
+            class="button" 
+            value="Verificar" 
+            id="verificar" 
+            onclick="calcular()">verificar</button>
+        <div id="res">Resultado</div>
+        <div id="multa">Status</div>
+    </div>
+</body>
+
+<script>
+    var botao = window.document.getElementById('verificar')
+    botao.addEventListener('mouseenter', entrou)
+    botao.addEventListener('mouseout', saiu)
+
+    function entrou() {    
+        botao.style.color = 'red'
+    }
+
+    function saiu() {
+        botao.style.color = 'black'
+    }
+
+    function calcular() {
+        var txtvel = window.document.querySelector('input#txtvel')
+        var multa = window.document.getElementById('multa')
+        var resposta = window.document.getElementById('res')
+        var vel = Number(txtvel.value)
+
+        resposta.innerHTML = `Sua velocidade atual é de ${vel}Km/h.</br>`
+        if (vel > 60) {
+            multa.innerHTML = 'Velocidade acima de 60Km/h.</br></br>Multado.'
+            multa.style.color = 'red'
+        } else {
+            multa.innerHTML = 'Dentro do limite de velocidade.'
+            multa.style. color = 'green'
+        }
+    }
+</script>
+</html>

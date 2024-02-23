@@ -1,0 +1,6 @@
+let v = function(x=0) {
+    return x * 2
+}
+
+resultado = v(5)
+console.log(resultado)

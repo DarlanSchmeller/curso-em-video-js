@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exerc006</title>
+    <style>
+        body{
+            background: radial-gradient(circle, #fff, rgb(152, 161, 167));
+        }
+        main{
+            font-size: 15px;
+            border: solid rgba(0, 0, 0, 0.5);
+            border-color: black;
+            border-radius: 10px;
+            padding: 1px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            line-height: 100px;
+            max-width: 350px;
+            background-color: #fff;
+            margin: 50px auto;
+        }
+        div#area{
+            color: rgb(195, 16, 94);
+            text-shadow: 1px 5px 15px rgba(0, 0, 0, 0.5);
+            background-color: green;
+            border: solid rgba(0, 0, 0, 0.5);
+            padding: 1px;
+            border-color: rgb(57, 57, 70);
+            border-radius: 1000px;
+            max-width: 150px;
+            margin: 5px auto;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <main><h1>Teste</h1>
+   <div class="corptexto" onmouseenter="textoentro()" onmouseleave="textosaiu()"> 
+    <p>Tester</p>
+</div> 
+
+    <div id="area">
+        Interaja... 
+    </div>
+    
+    
+    </main> 
+
+</body>
+
+
+<script>
+    var botão = window.document.getElementById('area')
+    botão.addEventListener('click', clicar)
+    botão.addEventListener('mouseenter', entrou) // Estas três linhas esperam o evento e 
+    botão.addEventListener('mouseout', saiu)//notificam a função, não sendo necessário fazer>>
+    var texto = window.document.getElementsByClassName('corptexto')[0]//"<div class="corptexto" onmouseenter="textoentro()" onmouseleave="textosaiu()">"
+  
+    
+    function textoentro(){
+        texto.style.background = 'red';
+        texto.innerText = 'Obrigado por explorar! :)'
+    }
+
+
+    function textosaiu() {
+        texto.style.background = 'white'
+        texto.innerText = 'Tester'
+    }
+
+    function clicar() {
+        botão.innerText = 'Obrigado por interagir'
+        botão.style.background = 'grey'
+    }
+
+    function entrou() {
+        botão.innerText = 'Quer clicar?'
+
+    }
+
+    function saiu() {
+        botão.innerText = 'Interaja...'
+        botão.style.background = 'green';
+    }
+
+</script>
+
+</html>

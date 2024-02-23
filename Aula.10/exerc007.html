@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exerc007</title>
+    <style>
+        body{
+            background: radial-gradient(circle, #fff, rgb(152, 161, 167));
+        }
+        main, #resultado {
+            font-size: 30px;
+            font-weight: bold;
+            border: solid rgba(0, 0, 0, 0.5);
+            border-color: black;
+            border-radius: 10px;
+            padding: 1px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            line-height: 100px;
+            max-width: 350px;
+            background-color: #ffffff;
+            margin: 100px auto;
+        }
+        p{
+            font-size: 15px;
+            border: solid rgba(0, 0, 0, 0.5);
+            border-color: black;
+            border-radius: 10px;
+            padding: 1px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            margin: 1px auto;
+            
+        }
+        input{
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            height: 30px;
+            margin: 30px auto;
+            width: 50px;
+            text-align: center;
+        }
+        #botaozin {
+            width: 120px;
+            height: 50px;
+            font-size: 25px;
+            border-radius: 50px;
+            box-shadow: 0px 3px 14px rgba(0, 0, 0, 0.5);
+            background-color: #fff;
+        }
+        #txtn1, #txtn2 {
+            font-size: 15px;
+            font-weight: bold;
+            border: solid rgba(0, 0, 0, 0.5);
+            border-color: black;
+            border-radius: 10px;
+            padding: 1px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            line-height: 100px;
+            max-width: 350px;
+            background-color: #fff;
+            margin: 20px auto;
+            
+        }
+        
+    </style>
+
+</head>
+
+
+<body>
+    <main>Somando Valores</main>   
+    <input type="number" name="txtn1" id="txtn1">
+    <p>+</p>
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" id="botaozin" onclick="somar()">
+    <div id='resultado'>Resultado</div>
+</body>
+
+
+<script>
+  
+  function somar(){
+    var inputnumero = window.document.getElementById('txtn1')
+    var inputnumero2 = window.document.querySelector('input#txtn2')
+    var resultado = window.document.getElementById('resultado')
+       
+    var numero1 = Number(inputnumero.value)
+    var numero2 = Number(inputnumero2.value)
+    var res = numero1 + numero2
+
+    resultado.innerHTML = 'Resultado: ' + res;
+  }
+  
+</script>
+
+</html>

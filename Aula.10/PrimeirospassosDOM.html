@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOMteste</title>
+    <style>
+        body{ 
+            background: radial-gradient(circle, antiquewhite, rgb(176, 185, 185));
+            
+        }
+        main{
+            text-align: center;
+            padding: 1px;
+            background: radial-gradient(#fff,#d8dfe6);
+            border-radius: 30px;
+            border-color: #333;
+            border: 2px solid rgb(0, 0, 0,0.5);
+            margin: 0pt auto;
+            max-width: 800px;
+            box-shadow: 0px 1px 1px rgba(0,0,0,0.5);
+
+        }
+    </style>
+</head>
+
+
+    
+<body>
+    <main><h1>Teste</h1>
+      <div name="divisao">testae</div>
+    <p>Aqui vai um parágrafo.</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p></main>
+    <div id='msg'>Clique em mim</div>
+</body> 
+
+
+<script>
+    var corpo = window.document.body 
+    var p1 = window.document.getElementsByTagName('p')[1]
+    var d = window.document.getElementById('msg')
+    var divisor = window.document.getElementsByName('divisao')[0]
+    window.document.write('Está escrito assim: ' + p1.innerText)
+   
+    divisor.innerText = ('Esse texto foi alterado via DOM.')
+    d.innerText = ('Estou aguardando...')
+    p1.style.color = 'blue'
+    document.write(p1.innerHTML)
+    window.alert(p1.innerText)
+    window.alert('Esse é com innerHTML: ' + p1.innerHTML)
+
+    d = window.document.querySelector('div#msg') //Também e possível acessar uma DIV através do DOM dessa forma.
+    d.style.color = 'red'
+</script>
+
+</html>
