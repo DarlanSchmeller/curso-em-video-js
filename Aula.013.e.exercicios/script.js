@@ -3,7 +3,7 @@ const msg1 = window.document.getElementById('mensagem1')
 const periodo = window.document.getElementById('periodo')
 const dica = window.document.getElementById('dica1')
 
-
+// site code
 // Comandos genéricos abaixo
 imagem.innerHTML = '<img src="BancoDeImagens/logomm.png" alt="Logo MMTecnologia">'
 
